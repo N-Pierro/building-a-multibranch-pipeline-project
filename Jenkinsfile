@@ -3,7 +3,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:20.11.1-alpine3.19'
+            image 'node:20.11.1-alpine'
             args '-p 3000:3000 -p 5000:5000' 
         }   
     }
@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm -v'
-                sh 'npm install -g npm@latest'
+                sh 'npm install'
               /*  sh 'npm cache clean --force'
                 sh 'npm install --verbose'  */
             }
