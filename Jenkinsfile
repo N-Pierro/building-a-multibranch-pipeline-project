@@ -13,7 +13,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                sh 'npm -v'
+                sh 'npm install --verbose'
             }
         }
         stage('Test') {
