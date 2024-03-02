@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'npm -v'
                 sh 'npm uninstall -g npm'
-                sh 'npm cache clean --force
+                sh 'npm cache clean --force'
                 sh 'npm install'
               /*  sh 'npm cache clean --force'
                 sh 'npm install --verbose'  */
