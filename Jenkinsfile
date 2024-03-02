@@ -3,7 +3,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:20.11.1-alpine3.19'
+            image 'node:lts-buster-slim'
             args '-p 3000:3000 -p 5000:5000' 
         }   
     }
@@ -13,9 +13,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'npm -v'
-                sh 'npm uninstall -g npm'
-                sh 'npm cache clean --force'
                 sh 'npm install'
               /*  sh 'npm cache clean --force'
                 sh 'npm install --verbose'  */
