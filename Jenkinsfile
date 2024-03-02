@@ -11,13 +11,13 @@ pipeline {
         CI = 'true'
     }
     stages {
-        stage('Build') {
+     /*   stage('Build') {
             steps {
                 sh 'npm -v'
                 sh 'npm cache clean --force'
                 sh 'npm install --verbose'
             }
-        }
+        }    */
         stage('Test') {
             steps {
                 sh './jenkins/scripts/test.sh'
