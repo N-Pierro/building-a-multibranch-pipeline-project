@@ -14,7 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm -v'
-                sh 'update'
+                sh 'npm install -g npm@latest'
               /*  sh 'npm cache clean --force'
                 sh 'npm install --verbose'  */
             }
