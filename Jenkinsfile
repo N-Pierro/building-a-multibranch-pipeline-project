@@ -14,8 +14,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'npm -v'
-                sh 'npm cache clean --force'
-                sh 'npm install --verbose'
+              /*  sh 'npm cache clean --force'
+                sh 'npm install --verbose'  */
             }
         }    
         stage('Test') {
